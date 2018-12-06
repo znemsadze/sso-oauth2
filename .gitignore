@@ -1,0 +1,6 @@
+# Ignore bundler config.
+/target
+/.idea
+/spring-security-sso-ui/target
+/spring-security-sso-ui-2/target
+/spring-security-sso-auth-server/target

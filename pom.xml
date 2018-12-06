@@ -1,0 +1,94 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.baeldung</groupId>
+    <artifactId>spring-security-sso</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>spring-security-sso</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <junit.version>4.12</junit.version>
+        <org.hamcrest.version>1.3</org.hamcrest.version>
+        <mockito.version>2.21.0</mockito.version>
+        <!-- logging -->
+        <org.slf4j.version>1.7.21</org.slf4j.version>
+        <logback.version>1.1.7</logback.version>
+        <!-- plugins -->
+        <java.version>1.8</java.version>
+        <log4j.version>1.2.17</log4j.version>
+        <moneta.version>1.1</moneta.version>
+        <esapi.version>2.1.0.1</esapi.version>
+        <jmh-core.version>1.19</jmh-core.version>
+        <jmh-generator.version>1.19</jmh-generator.version>
+        <hamcrest-all.version>1.3</hamcrest-all.version>
+        <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
+        <maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-cli.version>1.4</commons-cli.version>
+        <maven-war-plugin.version>3.0.0</maven-war-plugin.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+
+        <!-- <maven-pmd-plugin.version>3.9.0</maven-pmd-plugin.version> -->
+        <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
+        <rest-assured.version>3.1.0</rest-assured.version>
+        <oauth.version>2.3.3.RELEASE</oauth.version>
+        <oauth-auto.version>2.0.1.RELEASE</oauth-auto.version>
+    </properties>
+    <modules>
+        <module>spring-security-sso-auth-server</module>
+        <module>spring-security-sso-ui</module>
+        <module>spring-security-sso-ui-2</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <dependencies>
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>
+
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>${org.hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${org.hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-logger-api</artifactId>
+            <version>${maven-surefire-plugin.version}</version>
+            <!-- to get around bug https://github.com/junit-team/junit5/issues/801 -->
+            <scope>test</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+
+</project>
